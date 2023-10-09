@@ -1,0 +1,104 @@
+@import "../../../styles.scss";
+
+.centered-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.task-manager-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  max-width: 1000px;
+  max-height: 680px;
+}
+
+.sidebar {
+  background: linear-gradient(to left bottom, #fff, #63f4fc);
+
+  color: black;
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  padding: 42px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.tasks-list-container {
+  background: linear-gradient(to right top, #fff, rgb(174, 249, 174));
+  color: black;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 42px;
+}
+
+.title {
+  font-family: "Roboto";
+  font-size: 24px;
+  color: black;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.list-menu {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+  flex-grow: 1;
+  .list-menu-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    border-radius: 5px;
+    width: 100%;
+    color: #025b7d;
+    margin-bottom: 5px;
+    &:hover {
+      box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.45),
+        5px 5px 15px rgba(0, 0, 0, 0.6);
+    }
+
+    &.is-active {
+      box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.45),
+        5px 5px 15px rgba(0, 0, 0, 0.6);
+    }
+  }
+}
+
+.btn {
+  background: #63f4fc;
+  &:hover {
+    box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.45),
+      5px 5px 15px rgba(0, 0, 0, 0.6);
+    font-weight: bolder;
+  }
+}
+
+.task {
+  background: #b4fab4;
+  padding: 15px 20px;
+  border-radius: 5px;
+  margin-top: 10px;
+
+  &:not(.complete) {
+    cursor: pointer;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+    &:active {
+      transform: scale(0.95);
+    }
+    &:hover {
+      box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1),
+        5px 5px 15px rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  &.complete {
+    text-decoration: line-through;
+    opacity: 0.8;
+  }
+}
