@@ -21,6 +21,7 @@
 }
 
 .tasks-list-container {
+  position: relative;
   background: linear-gradient(to right top, #fff, rgb(174, 249, 174));
   color: black;
   display: flex;
@@ -93,4 +94,19 @@
     text-decoration: line-through;
     opacity: 0.8;
   }
+}
+
+.circle-add-button {
+  position: absolute;
+  bottom: 35px;
+  right: 35px;
+  height: 50px;
+  width: 50px;
+  background: #84e584;
+  border: none;
+  &:hover {
+    box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1),
+      5px 5px 15px rgba(0, 0, 0, 0.3);
+  }
+  border-radius: 50%;
 }

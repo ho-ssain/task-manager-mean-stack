@@ -4,28 +4,31 @@
       <h1 class="title">Lists</h1>
 
       <div class="list-menu">
-        <a href="#" class="list-menu-item">list #1</a>
-        <a href="#" class="list-menu-item">list #1</a>
-        <a href="#" class="list-menu-item">list #1</a>
-        <a href="#" class="list-menu-item">list #1</a>
-        <a href="#" class="list-menu-item">list #1</a>
+        <a
+          href="#"
+          class="list-menu-item"
+          *ngFor="let item of lists"
+          [routerLink]="['/lists', item._id]"
+          routerLinkActive="is-active"
+        >
+          <p>{{ item.title }}</p>
+        </a>
       </div>
 
-      <button class="btn button" (click)="createNewList()">+ New List</button>
+      <button class="btn button" routerLink="/new-list">+ New List</button>
     </div>
 
     <div class="tasks-list-container">
       <h1 class="title">Tasks</h1>
+
       <!-- Task Elements  -->
-      <div class="task complete">
-        <p>This something I have to do.</p>
+      <div class="task" *ngFor="let item of tasks">
+        <p>{{ item.title }}</p>
       </div>
-      <div class="task">
-        <p>This something I have to do.</p>
-      </div>
-      <div class="task">
-        <p>This something I have to do.</p>
-      </div>
+
+      <button class="button circle-add-button">
+        <img src="../../../assets/plus-icon.svg" alt="" />
+      </button>
     </div>
   </div>
 </div>
