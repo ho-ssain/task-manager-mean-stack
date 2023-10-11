@@ -1,0 +1,18 @@
+<div class="centered-content">
+  <div class="modal-box">
+    <div class="title">Create a New list</div>
+    <input
+      #listTitleInput
+      type="text"
+      class="input"
+      placeholder="Enter list name"
+    />
+    <br /><br />
+    <div class="buttons is-right">
+      <button class="button is-danger" routerLink="/">Cancel</button>
+      <button class="button is-dark" (click)="createList(listTitleInput.value)">
+        Create
+      </button>
+    </div>
+  </div>
+</div>
