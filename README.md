@@ -1,1 +1,0 @@
-# task-manager-mean-stack
