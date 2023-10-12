@@ -1,0 +1,21 @@
+<div class="centered-content">
+  <div class="model-box">
+    <div class="title">Add a task</div>
+    <input #taskTitleInput type="text" class="input" placeholder="Enter task" />
+    <br /><br />
+    <div class="btn-grp">
+      <button
+        style="
+          padding-left: 20px;
+          padding-right: 20px;
+          padding-top: 10px;
+          padding-bottom: 10px;
+        "
+        class="btn create"
+        (click)="createTask(taskTitleInput.value)"
+      >
+        Add
+      </button>
+    </div>
+  </div>
+</div>

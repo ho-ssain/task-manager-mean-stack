@@ -42,6 +42,9 @@
   margin-top: 15px;
   flex-grow: 1;
   .list-menu-item {
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
     display: flex;
     align-items: center;
     padding: 10px 15px;
@@ -57,21 +60,6 @@
       box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.45),
         5px 5px 15px rgba(0, 0, 0, 0.6);
     }
-  }
-}
-
-.btn {
-  background: $dark;
-  color: $light;
-  padding: 10px;
-  margin-left: auto;
-  margin-right: auto;
-  border: none;
-  font-size: 22px;
-  &:hover {
-    box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.45),
-      5px 5px 15px rgba(0, 0, 0, 0.2);
-    font-weight: bolder;
   }
 }
 
